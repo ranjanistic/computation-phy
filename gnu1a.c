@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
+int main(){
     float x, y, r, t, x0;
 
     FILE *fp;
