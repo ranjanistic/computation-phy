@@ -5,7 +5,7 @@ int main(){
     float x, y, r, t, x0;
 
     FILE *fp;
-    fp = fopen("gnu1a.txt", "w");
+    fp = fopen("data/gnu1a.dat", "w");
 
     for (x = 0; x <= 4; x += 0.1){
         y = 0;

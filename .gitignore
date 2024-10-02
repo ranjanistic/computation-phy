@@ -3,3 +3,5 @@
 .vscode
 *.out
 *.exe
+*.dat
+!init.dat

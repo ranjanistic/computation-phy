@@ -8,7 +8,7 @@ int main(){
 
     FILE *fp = NULL;
 
-    fp = fopen("gnu1b.txt", "w");
+    fp = fopen("data/gnu1b.dat", "w");
 
     float x0 = 5, y0 = 5, r = 3;
 
