@@ -3,18 +3,18 @@
 
 
 int main(){
-    float terms = 20;
-    for(int x = 1; x <= 5; x++){  
+    float terms = 3;
+    for(float x = 0.2; x <= 2.1; x+=0.1){  
         float sum = 0;
         float t = 1;
         for(int term = 1; term <= terms; term++){
             if(term == 1){
                 sum += 1;
             } else {
-                t*=1/pow(x, term);
+                t*=1/pow(x, 1);
                 sum+=t;
             }
         }
-       printf("x=%d,Sum=%f\t", x, sum);
+       printf("x=%f,Sum=%f\n", x, sum);
     }
 }
