@@ -1,4 +1,6 @@
-# Computation Physics - 3rd Semester
+# Computation Physics - 3rd Semester 
+
+## M.Sc Physics final year
 
 At Department of Physics & Astrophysics, DU (2024).
 
