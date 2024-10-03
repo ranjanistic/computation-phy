@@ -14,6 +14,8 @@ float j(float n, float z){
         res = ((2*n + 1)*j(n-1,z)/z) - j(n-2, z);
     }
     fprintf(fp, "j called: n=%f,z=%f,j=%f\n", n, z, res);
+    fclose(fp);
+    fclose(fpw);
     return res;
 }
 

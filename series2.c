@@ -22,6 +22,6 @@ int main(){
     for(float x = 0; x <= 2*pi; x+=pi/100){
         fprintf(fp, "%f\t%f\t%f\n", x, scos(x, 0.0001), cos(x));
     }
-
+    fclose(fp);
     return 0;
 }

@@ -17,5 +17,7 @@ int main(){
         x = x0 + r*cos(t);
         fprintf(fp, "%f\t%f\n", x, y);
     }
+    fclose(fp);
+
     return 0;
 }

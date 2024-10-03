@@ -24,5 +24,7 @@ int main(){
         x = 1;
         fprintf(fp, "%f\t%f\n", x, y);
     }
+    fclose(fp);
+
     return 0;
 }

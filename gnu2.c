@@ -53,6 +53,16 @@ int main()
         fprintf(fpc2, "%f\t%f\t%f\n", th, x(th), y(th, A3, n3, del32));
         fprintf(fpc3, "%f\t%f\t%f\n", th, x(th), y(th, A3, n3, del33));
     }
-
+    
+    fclose(fpa1);
+    fclose(fpa2);
+    fclose(fpa3);
+    fclose(fpa4);
+    fclose(fpb1);
+    fclose(fpb2);
+    fclose(fpb3);
+    fclose(fpc1);
+    fclose(fpc2);
+    fclose(fpc3);
     return 0;
 }

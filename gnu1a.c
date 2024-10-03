@@ -21,5 +21,7 @@ int main(){
         y = (3 / 4) * x;
         fprintf(fp, "%f\t%f\n", x, y);
     }
+    fclose(fp);
+
     return 0;   
 }

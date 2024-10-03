@@ -21,6 +21,8 @@ int main(){
         s = cos(pi*z*z/2)*s;
         fprintf(fp, "%f\t%f\n", z, s);
     }
+    fclose(fp);
+
 
     return 0;
 }

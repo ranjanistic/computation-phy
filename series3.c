@@ -27,9 +27,10 @@ float j(int n, float x, float acc){
 
 int main(){
     FILE *fp = fopen("data/series3.dat", "w");
-        for(float x = 0; x <= 16; x+=0.01){
-            fprintf(fp, "%f\t%f\t%f\t%f\n", x, j(0, x, 0.001),j(1, x, 0.001),j(2, x, 0.001));
-        }
+    for(float x = 0; x <= 16; x+=0.01){
+        fprintf(fp, "%f\t%f\t%f\t%f\n", x, j(0, x, 0.001),j(1, x, 0.001),j(2, x, 0.001));
+    }
+    fclose(fp);
     
     return 0;
 }

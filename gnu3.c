@@ -26,5 +26,7 @@ int main() {
     for (float x = -6*pi; x <= 6*pi; x+= pi/1000.0) {
         fprintf(fp, "%f\t%f\n", x, y(fabs(x - (period * (int)(x/period)))));
     }
+    fclose(fp);
+
     return 0;
 }
