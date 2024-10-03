@@ -22,8 +22,7 @@ float U4(float x){
 
 
 int main(){
-
-float inc = 0.1;
+    float inc = 0.1;
     for(float x = -1;  x <= 1.1; x+=inc){
         float x1 = x, x2 = x+inc, x3, z;
         if(U4(x)*U4(x+inc) < 0){
