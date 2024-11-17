@@ -6,7 +6,7 @@
 
 
 void plot(){
-    FILE *fp2 = fopen("gnuia.p", "w");
+    FILE *fp2 = fopen("plots/gnuia.p", "w");
     fprintf(fp2, "set terminal postscript enhanced color solid 22\n");
     fprintf(fp2, "set output 'gnuia.eps'\n");
     fprintf(fp2, "set title \"GNU IA ques\"\n");
@@ -40,19 +40,15 @@ int main() {
     float start = -6*PI;
     float end = 6*PI;
 
-    FILE *fp = fopen("gnuia.dat", "w");
+    FILE *fp = fopen("data/gnuia.dat", "w");
 
     for (float x = start; x <= end; x += (period / 1000)) {
         float locx =  fabs(x) - (period*(int)fabs((x/period)));
         if(x < 0){
             locx = period - locx;
         }
-        float locx2 =  fabs(x) - (period*(int)fabs((x/period)));
-        if(x < 0){
-            locx2 = period - locx2;
-        }
         float ty = triangle(locx, period/2, period);
-        float ly = line(locx2, period2/2, period2);
+        float ly = line(locx, period2/2, period2);
         if(ly == 0){
             fprintf(fp, "%f\t%f\t\n", x, ty);
         } else {
