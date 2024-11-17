@@ -4,5 +4,7 @@
 *.out
 *.exe
 *.dat
+*.p
 !init.dat
+!init.p
 *.log
