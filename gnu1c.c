@@ -16,10 +16,6 @@ int main(){
         y = 5;
         fprintf(fp, "%f\t%f\n", x, y);
     }
-    for(y = 1; y <= 5;y+=0.1){
-        x = 5;
-        fprintf(fp, "%f\t%f\n", x, y);
-    }
     for(y = 5; y >= 1;y-=0.1){
         x = 1;
         fprintf(fp, "%f\t%f\n", x, y);
