@@ -2,9 +2,6 @@
 #include<math.h>
 
 float j(float n, float z){
-    FILE *fp = fopen("j.log", "a");
-    FILE *fpw = fopen("j.log", "w");
-    fprintf(fpw, "");
     float res;
     if(n == 0){
         res = sin(z)/z;
@@ -13,9 +10,6 @@ float j(float n, float z){
     } else {
         res = ((2*n + 1)*j(n-1,z)/z) - j(n-2, z);
     }
-    fprintf(fp, "j called: n=%f,z=%f,j=%f\n", n, z, res);
-    fclose(fp);
-    fclose(fpw);
     return res;
 }
 
@@ -24,9 +18,16 @@ int main(){
 
     fp = fopen("data/gnu5.dat", "w");
 
-    for (float n = 0; n <= 5; n++) {
-        for (float z = 0.5; z <= 5; z +=0.01) {
-            fprintf(fp, "%f\t%f\n", z, j(n,z));
+    for (float z = 0.5; z <= 5; z +=0.01) {
+        float j0 = j(0, z);
+        float j1 = j(1, z);
+        fprintf(fp, "%f\t%f\n", z, j0);
+        fprintf(fp, "%f\t%f\n", z, j1);
+        for (float n = 1; n <= 5; n++) {
+            float j2 = ((2*n + 1)*j1/z) - j0;
+            fprintf(fp, "%f\t%f\n", z, j2);
+            j0 = j1;
+            j1 = j2;
         }
     }
 }
