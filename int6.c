@@ -46,7 +46,7 @@ float secant(int n, float zl, float zr, float acc){
 }
 
 int main(){
-    int n = 1;
+    int n = 2;
     float zinc = 0.01;
     for(float z = 0; z <= 10; z+=zinc){
         if(J(n, z) == 0){ // if root exactly at z
