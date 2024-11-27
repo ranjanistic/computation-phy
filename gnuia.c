@@ -22,7 +22,7 @@ float triangle(float x, float amplitude, float width) {
         return x;
     }
     if (width/2 <= x  && x < width) {
-        return amplitude*2 - x;
+        return -x + amplitude;
     }
     return x;
 }
@@ -37,6 +37,7 @@ float line(float x, float amplitude, float width) {
 int main() {
     float period = 2*PI;
     float period2 = PI;
+
     float start = -6*PI;
     float end = 6*PI;
 
@@ -47,8 +48,8 @@ int main() {
         if(x < 0){
             locx = period - locx;
         }
-        float ty = triangle(locx, period/2, period);
-        float ly = line(locx, period2/2, period2);
+        float ty = triangle(locx, 2*PI, period);
+        float ly = line(locx, PI/2, period2);
         if(ly == 0){
             fprintf(fp, "%f\t%f\t\n", x, ty);
         } else {
