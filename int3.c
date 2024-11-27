@@ -32,6 +32,7 @@ int main(){
         float x = r*cos(th);
         float y = r*sin(th);
         fprintf(fp, "%f\t%f\n", x, y);
+        fprintf(fp, "%f\t%f\n", x, -y);
     }
     E = 0;
     for(float r = 0.51; r <= 5.0; r+=0.01){
@@ -40,6 +41,7 @@ int main(){
         float x = r*cos(th);
         float y = r*sin(th);
         fprintf(fp1, "%f\t%f\n", x, y);
+        fprintf(fp1, "%f\t%f\n", x, -y);
     }
 
     fclose(fp);

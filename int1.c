@@ -60,7 +60,7 @@ float hermite(float llim, float ulim, int n){
     float s = 0;
     #include "hermite.c"
     
-    for(int i = 0; i < n/2; i++){
+    for(int i = 0; i < n/2 ; i++){
         s += w[i]*(fh(x[i]) + fh(-x[i]));    
     }
     return s;
