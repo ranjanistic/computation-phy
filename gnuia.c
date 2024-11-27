@@ -13,16 +13,16 @@ void plot(){
     fprintf(fp2, "set grid\n");
     fprintf(fp2, "set xrange [-6*pi:6*pi]\n");
     fprintf(fp2, "set xtics (-6*pi,-5*pi,-4*pi,-3*pi,-2*pi,-pi,0,pi,2*pi,3*pi,4*pi,5*pi,6*pi)\n");
-    fprintf(fp2, "plot \"gnuia.dat\" u 1:2 w linespoints, \"gnuia.dat\" u 1:3 w linespoints");
+    fprintf(fp2, "plot \"gnuia.dat\" u 1:2, \"gnuia.dat\" u 1:3");
     fclose(fp2);
 }
 
 float triangle(float x, float amplitude, float width) {   
-    if (0 <= x && x < amplitude) {
+    if (0 <= x && x < width/2) {
         return x;
     }
-    if (amplitude <= x  && x < width) {
-        return width - x;
+    if (width/2 <= x  && x < width) {
+        return amplitude*2 - x;
     }
     return x;
 }
