@@ -25,7 +25,7 @@ float simpson(float z, float N, float ulim, float llim){
     float s = f(ulim, z, N) + f(llim, z, N);
 
     for(int i = 1; i < n; i++){
-        s+= f(llim + i*h,z, N) + f(llim + (i+1)*h, z, N);
+        s+= 4*f(llim + i*h,z, N) + 2*f(llim + (i+1)*h, z, N);
     }
     return s*h/3;
 }
