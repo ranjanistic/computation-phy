@@ -47,7 +47,7 @@ float laguerre(float llim, float ulim, int n){
     float s = 0;
     #include "laguerre.c"
     
-    for(int i = 0; i < n/2; i++){
+    for(int i = 0; i < n; i++){
         s += w[i]*fl(x[i]);
     }
     return s;
